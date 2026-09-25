@@ -1,0 +1,94 @@
+.row {
+  display: flex;
+  width: 100%;
+  margin: 3px 0;
+}
+
+.outgoing {
+  justify-content: flex-end;
+}
+
+.incoming {
+  justify-content: flex-start;
+}
+
+.column {
+  display: flex;
+  max-width: min(78%, 560px);
+  flex-direction: column;
+  gap: 5px;
+}
+
+.outgoing .column {
+  align-items: flex-end;
+}
+
+.bubble {
+  position: relative;
+  border-radius: 17px;
+  padding: 11px 14px 9px;
+  font-size: 0.92rem;
+  line-height: 1.45;
+  box-shadow: 0 3px 10px rgb(21 33 59 / 5%);
+}
+
+.incoming .bubble {
+  border-bottom-left-radius: 5px;
+  color: var(--ink);
+  background: var(--surface);
+}
+
+.outgoing .bubble {
+  border-bottom-right-radius: 5px;
+  color: #fff;
+  background: var(--blue);
+}
+
+.failed .bubble {
+  background: var(--danger-soft);
+  color: var(--danger);
+  box-shadow: none;
+}
+
+.meta {
+  display: flex;
+  min-height: 15px;
+  align-items: center;
+  gap: 4px;
+  color: var(--muted-light);
+  font-size: 0.68rem;
+  line-height: 1;
+}
+
+.outgoing .meta {
+  justify-content: flex-end;
+}
+
+.sent {
+  color: var(--blue);
+}
+
+.failedText {
+  color: var(--danger);
+}
+
+.retry {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  border: 0;
+  padding: 0;
+  color: var(--danger);
+  background: transparent;
+  font: 700 0.68rem/1.2 var(--font-sans);
+  cursor: pointer;
+}
+
+.retry:hover {
+  text-decoration: underline;
+}
+
+.retry:focus-visible {
+  outline: 2px solid var(--danger);
+  outline-offset: 2px;
+}

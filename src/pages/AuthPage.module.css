@@ -1,0 +1,9 @@
+.page {
+  display: grid;
+  min-height: 100svh;
+  place-items: center;
+  padding: 32px 20px;
+  background:
+    radial-gradient(circle at 10% 15%, rgb(215 241 233 / 90%), transparent 30%),
+    radial-gradient(circle at 90% 85%, rgb(220 229 255 / 80%), transparent 34%), var(--canvas);
+}

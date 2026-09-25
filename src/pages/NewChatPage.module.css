@@ -1,0 +1,260 @@
+.page {
+  min-height: 100svh;
+  padding: 28px 24px;
+  background:
+    radial-gradient(circle at 8% 8%, rgb(215 241 233 / 70%), transparent 30%), var(--canvas);
+}
+
+.shell {
+  display: grid;
+  width: min(100%, 1020px);
+  min-height: calc(100svh - 56px);
+  margin: 0 auto;
+  grid-template-columns: minmax(230px, 0.8fr) minmax(0, 1.65fr);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 26px;
+  background: var(--surface);
+  box-shadow: var(--shadow-panel);
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  padding: 26px 20px;
+  color: #fff;
+  background: var(--navy);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.brandMark {
+  display: grid;
+  width: 35px;
+  height: 35px;
+  place-items: center;
+  border-radius: 11px;
+  color: var(--navy);
+  background: var(--mint);
+}
+
+.sidebarLabel {
+  margin: 64px 0 14px;
+  color: rgb(255 255 255 / 48%);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.contactCard {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  border: 1px solid rgb(255 255 255 / 11%);
+  border-radius: 15px;
+  padding: 12px;
+  background: rgb(255 255 255 / 7%);
+}
+
+.contactInfo {
+  display: grid;
+  min-width: 0;
+  gap: 4px;
+}
+
+.contactName {
+  overflow: hidden;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 750;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.contactMeta {
+  color: rgb(255 255 255 / 48%);
+  font-size: 0.7rem;
+}
+
+.sidebarBottom {
+  display: grid;
+  gap: 16px;
+  margin-top: auto;
+}
+
+.account {
+  display: grid;
+  gap: 5px;
+  border-top: 1px solid rgb(255 255 255 / 12%);
+  padding-top: 17px;
+}
+
+.accountLabel {
+  color: rgb(255 255 255 / 44%);
+  font-size: 0.66rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.accountValue {
+  overflow: hidden;
+  color: rgb(255 255 255 / 82%);
+  font-size: 0.77rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.logout {
+  justify-content: flex-start;
+  color: rgb(255 255 255 / 65%);
+}
+
+.logout:hover:not(:disabled) {
+  color: #fff;
+  background: rgb(255 255 255 / 9%);
+}
+
+.content {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  padding: clamp(28px, 5vw, 62px);
+  background: var(--surface);
+}
+
+.contentHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 42px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: 99px;
+  padding: 7px 10px;
+  color: var(--green-dark);
+  background: var(--mint);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.badge svg {
+  width: 13px;
+  height: 13px;
+}
+
+.title {
+  margin: 14px 0 0;
+  color: var(--ink);
+  font: 800 clamp(1.8rem, 4vw, 2.65rem)/1.04 var(--font-display);
+  letter-spacing: -0.055em;
+}
+
+.subtitle {
+  max-width: 28rem;
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.55;
+}
+
+.illustration {
+  display: grid;
+  width: 68px;
+  height: 68px;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 23px;
+  color: var(--blue);
+  background: var(--blue-soft);
+}
+
+.formArea {
+  width: min(100%, 500px);
+  margin-top: auto;
+  padding-top: 42px;
+}
+
+.footerNote {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 32px;
+  color: var(--muted-light);
+  font-size: 0.72rem;
+  line-height: 1.4;
+}
+
+.footerNote svg {
+  flex: 0 0 auto;
+}
+
+@media (max-width: 760px) {
+  .page {
+    padding: 0;
+  }
+
+  .shell {
+    min-height: 100svh;
+    grid-template-columns: 1fr;
+    border: 0;
+    border-radius: 0;
+  }
+
+  .sidebar {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 18px;
+  }
+
+  .sidebarLabel,
+  .contactCard,
+  .account,
+  .logout span {
+    display: none;
+  }
+
+  .sidebarBottom {
+    margin: 0;
+  }
+
+  .logout {
+    min-height: 38px;
+    padding: 0 10px;
+  }
+
+  .content {
+    min-height: calc(100svh - 68px);
+    padding: 28px 20px 24px;
+  }
+
+  .contentHeader {
+    margin-bottom: 22px;
+  }
+
+  .illustration {
+    width: 54px;
+    height: 54px;
+    border-radius: 18px;
+  }
+
+  .formArea {
+    padding-top: 22px;
+  }
+}

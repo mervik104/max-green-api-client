@@ -1,0 +1,41 @@
+.avatar {
+  position: relative;
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: var(--navy);
+  background: var(--mint);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+
+.small {
+  width: 32px;
+  height: 32px;
+  font-size: 0.72rem;
+}
+
+.medium {
+  width: 42px;
+  height: 42px;
+  font-size: 0.9rem;
+}
+
+.large {
+  width: 60px;
+  height: 60px;
+  font-size: 1.2rem;
+}
+
+.online {
+  position: absolute;
+  right: 0;
+  bottom: 1px;
+  width: 10px;
+  height: 10px;
+  border: 2px solid var(--surface);
+  border-radius: 50%;
+  background: var(--green);
+}

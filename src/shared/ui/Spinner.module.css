@@ -1,0 +1,42 @@
+.spinner {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle {
+  display: block;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: spin 700ms linear infinite;
+}
+
+.small {
+  width: 15px;
+  height: 15px;
+}
+
+.medium {
+  width: 20px;
+  height: 20px;
+}
+
+.large {
+  width: 28px;
+  height: 28px;
+  border-width: 3px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .circle {
+    animation-duration: 1.5s;
+  }
+}

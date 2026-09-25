@@ -1,0 +1,66 @@
+.form {
+  display: grid;
+  gap: 18px;
+}
+
+.title {
+  margin: 0;
+  color: var(--ink);
+  font: 800 clamp(1.55rem, 3vw, 2.05rem)/1.1 var(--font-display);
+  letter-spacing: -0.04em;
+}
+
+.description {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.phone {
+  position: relative;
+}
+
+.phone input {
+  padding-right: 48px;
+  letter-spacing: 0.04em;
+}
+
+.phoneIcon {
+  position: absolute;
+  right: 15px;
+  bottom: 14px;
+  color: var(--muted-light);
+  pointer-events: none;
+}
+
+.status {
+  display: flex;
+  min-height: 20px;
+  align-items: center;
+  gap: 8px;
+  color: var(--blue);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.error {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  color: var(--danger);
+  font-size: 0.8rem;
+  line-height: 1.45;
+}
+
+.error svg {
+  flex: 0 0 auto;
+  margin-top: 1px;
+}
+
+.hint {
+  margin: -3px 0 0;
+  color: var(--muted-light);
+  font-size: 0.75rem;
+  line-height: 1.45;
+}
